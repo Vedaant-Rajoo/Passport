@@ -1,9 +1,9 @@
-var express=require("express");
-var mongoose=require("mongoose"),
-    passport=require("passport"),
-    User=require("./models/user"),
-    LocalStrategy=require("passport-local"),
-    passportLocalMongoose=require("passport-local-mongoose")
+var express               =require("express"),
+    mongoose              =require("mongoose"),
+    passport              =require("passport"),
+    User                  =require("./models/user"),
+    LocalStrategy         =require("passport-local"),
+    passportLocalMongoose =require("passport-local-mongoose");
 
 var app=express();
 mongoose.connect("mongodb://localhost/auth_demo_app");
