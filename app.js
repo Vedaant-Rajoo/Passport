@@ -3,18 +3,18 @@ var express               =require("express"),
     passport              =require("passport"),
     User                  =require("./models/user"),
     LocalStrategy         =require("passport-local"),
+    bodyParser            =require("body-parser"),
+    app                   =express(),
     passportLocalMongoose =require("passport-local-mongoose");
 
-var app=express();
 mongoose.connect("mongodb://localhost/auth_demo_app");
 app.use(require("express-session")({
     secret:"Rusty is the cutest",
     resave:false,
-    saveUninitialized: false
+    saveUninitialized: false,
     
 }));
 app.set('view engine','ejs');
-var bodyParser=require("body-parser");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(passport.initialize());
 app.use(passport.session());
