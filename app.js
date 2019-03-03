@@ -28,7 +28,7 @@ passport.deserializeUser(User.deserializeUser());
 
 app.get("/secret",function(req,res){
     res.render("secret");
-})
+});
 app.get("/",function(req,res){
     res.render("home");
 });
