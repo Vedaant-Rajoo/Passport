@@ -7,7 +7,7 @@ var express               =require("express"),
     app                   =express(),
     passportLocalMongoose =require("passport-local-mongoose");
 
-mongoose.connect("mongodb://localhost/auth_demo_app");
+mongoose.connect("mongodb+srv://Vedaant:vedaant123@cluster0-yunv0.mongodb.net/test?retryWrites=true");
 app.use(require("express-session")({
     secret:"Rusty is the cutest",
     resave:false,
