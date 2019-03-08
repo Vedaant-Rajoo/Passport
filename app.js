@@ -15,6 +15,7 @@ app.use(require("express-session")({
     
 }));
 app.set('view engine','ejs');
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(passport.initialize());
 app.use(passport.session());
