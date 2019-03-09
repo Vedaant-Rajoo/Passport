@@ -36,10 +36,7 @@ app.get("/",function(req,res){
 
 ///AUTH ROUTES
 
-//show sign up form
-app.get("/register",function(req,res){
-    res.render("register");
-});
+
 //user sign up
 app.post("/register", function(req,res){
     /* req.body.username
@@ -85,12 +82,12 @@ app.get("/logout",function(req,res){
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
         return next();
-
     }
     res.redirect("/login");
 
 }
 var port = process.env.PORT || 3000;
+
 app.listen(port,function(){
     console.log("Serving passport on port",port);
 });
